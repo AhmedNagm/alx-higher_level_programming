@@ -3,15 +3,13 @@
 
 
 class LockedClass:
-    """
-    Prevent the user from initiating a new LockedClass 
-    for anything but attributes called 'first_name'.
-    """
-
     __slots__ = ["first_name"]
 
+    def __init__(self):
+        pass
 
-def __init__(self):
-    """Creates new instances of Locked Class."""
-
-    self.first_name = "first_name"
+    def __setattr__(self, name, value):
+        if name != "first_name":
+            raise AttributeError(
+                f"{name} is not an allowed attribute for this class")
+        super().__setattr__(name, value)
