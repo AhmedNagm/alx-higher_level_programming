@@ -1,4 +1,4 @@
-# 0x09-python-everything_is_object
+# 0x09-python-everything_is_object..
 
 - Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 - What is an object
